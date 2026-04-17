@@ -30,27 +30,6 @@ async function getJson(url) {
   return response.json();
 }
 
-function formatDate(value) {
-  return new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC"
-  }).format(new Date(value));
-}
-
-function formatDateTime(value) {
-  return new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZone: "UTC",
-    hour12: false
-  }).format(new Date(value));
-}
-
 function escapeInline(text) {
   return String(text ?? "")
     .replace(/\r?\n/g, " ")
@@ -61,60 +40,16 @@ function escapeInline(text) {
 function renderManualProject(project) {
   const title = escapeInline(project.title);
   const description = escapeInline(project.description);
+  const heading = project.url ? `### [${title}](${project.url})` : `### ${title}`;
+  const stack = Array.isArray(project.stack) && project.stack.length
+    ? project.stack.map((item) => `\`${escapeInline(item)}\``).join(" ")
+    : "";
 
-  if (project.url) {
-    return `- **[${title}](${project.url})** - ${description}`;
-  }
-
-  return `- **${title}** - ${description}`;
+  return [heading, description, stack].filter(Boolean).join("\n\n");
 }
-
-function renderRepo(repo) {
-  const title = escapeInline(repo.name);
-  const description = escapeInline(repo.description || "No description added yet.");
-  const language = repo.language ? ` | ${repo.language}` : "";
-  return `- **[${title}](${repo.html_url})**${language} - ${description} _(Updated ${formatDate(repo.pushed_at)})_`;
-}
-
-const [user, repos] = await Promise.all([
-  getJson(`https://api.github.com/users/${config.username}`),
-  getJson(`https://api.github.com/users/${config.username}/repos?per_page=100&sort=updated`)
-]);
-
-const publicRepos = repos.filter((repo) => !repo.private);
-const excludedRepos = new Set((config.excludedRepos || []).map((name) => name.toLowerCase()));
-const nonForkRepos = publicRepos.filter(
-  (repo) => !repo.fork && !excludedRepos.has(repo.name.toLowerCase())
-);
-const recentRepos = [...nonForkRepos]
-  .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
-  .slice(0, config.recentRepoCount || 4);
-
-const languageCounts = new Map();
-
-for (const repo of nonForkRepos) {
-  if (!repo.language) {
-    continue;
-  }
-
-  languageCounts.set(repo.language, (languageCounts.get(repo.language) || 0) + 1);
-}
-
-const topLanguages = [...languageCounts.entries()]
-  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-  .slice(0, 5)
-  .map(([language, count]) => `${language} (${count})`);
-
-const latestRepo = recentRepos[0];
+const user = await getJson(`https://api.github.com/users/${config.username}`);
 const aboutList = config.about.map((item) => `- ${item}`).join("\n");
-const manualProjects = config.manualProjects.map(renderManualProject).join("\n");
-const recentRepoList = recentRepos.length
-  ? recentRepos.map(renderRepo).join("\n")
-  : "- No public repositories found yet.";
-const topLanguagesText = topLanguages.length ? topLanguages.join(", ") : "No language data yet.";
-const latestRepoText = latestRepo
-  ? `**[${escapeInline(latestRepo.name)}](${latestRepo.html_url})** on ${formatDate(latestRepo.pushed_at)}`
-  : "No recent public repository activity yet.";
+const manualProjects = config.manualProjects.map(renderManualProject).join("\n\n");
 
 const readme = `# Hi there, I'm ${config.name}
 
@@ -140,27 +75,15 @@ const readme = `# Hi there, I'm ${config.name}
 ${aboutList}
 - Reach me at **[${config.email}](mailto:${config.email})**
 
-## GitHub Snapshot
-
-- Public repositories: **${user.public_repos}**
-- Followers / Following: **${user.followers} / ${user.following}**
-- GitHub account created: **${formatDate(user.created_at)}**
-- Most common repository languages: **${topLanguagesText}**
-- Most recently updated repository: ${latestRepoText}
-
 ## Languages & Tools
 
 <p align="left">
   <img src="https://skillicons.dev/icons?i=${config.skills.join(",")}" alt="Languages and tools" />
 </p>
 
-## Selected Work
+## Featured Work
 
 ${manualProjects}
-
-## Recent Public Repositories
-
-${recentRepoList}
 
 ## GitHub Stats
 
@@ -201,8 +124,6 @@ ${recentRepoList}
 <p align="left">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=${config.username}&theme=github-compact&hide_border=true&area=true" alt="GitHub activity graph" />
 </p>
-
-<sub>Last refreshed: ${formatDateTime(new Date().toISOString())} UTC via GitHub Actions</sub>
 `;
 
 await writeFile(readmePath, `${readme}\n`, "utf8");

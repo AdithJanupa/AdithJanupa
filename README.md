@@ -27,32 +27,49 @@
 - Fun fact: I love turning practical ideas into polished digital experiences
 - Reach me at **[adithjanupa@gmail.com](mailto:adithjanupa@gmail.com)**
 
-## GitHub Snapshot
-
-- Public repositories: **4**
-- Followers / Following: **1 / 1**
-- GitHub account created: **Feb 17, 2024**
-- Most common repository languages: **JavaScript (3)**
-- Most recently updated repository: **[Seaforestyuna-Restaurant-Tourism-Website](https://github.com/AdithJanupa/Seaforestyuna-Restaurant-Tourism-Website)** on Mar 23, 2026
-
 ## Languages & Tools
 
 <p align="left">
   <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,nodejs,express,flutter,dart,firebase,tailwind,mongodb,mysql,figma,git,github,vscode,java,cpp,cs,php" alt="Languages and tools" />
 </p>
 
-## Selected Work
+## Featured Work
 
-- **[Portfolio Website](https://adithjanupa.netlify.app)** - A modern personal portfolio built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Lucide icons.
-- **[SL Farmer Platform](https://slfarmer.com)** - A produce website plus admin workspace for product visibility, farm operations, and customer engagement.
-- **GovInfo Sri Lanka Prototype** - A bilingual e-government information portal with chatbot guidance, admin tools, Firebase, and Ollama integration.
-- **Banana Relic Raiders** - A React, TypeScript, and Phaser mini-game with a Node.js and Express backend plus puzzle-driven gameplay.
+### [Portfolio Website](https://adithjanupa.netlify.app)
 
-## Recent Public Repositories
+A modern personal portfolio with clean UI, smooth motion, and a strong focus on presentation.
 
-- **[Seaforestyuna-Restaurant-Tourism-Website](https://github.com/AdithJanupa/Seaforestyuna-Restaurant-Tourism-Website)** | JavaScript - Seaforestyuna Restaurant _(Updated Mar 23, 2026)_
-- **[MG-Production-Mobile-App-](https://github.com/AdithJanupa/MG-Production-Mobile-App-)** | JavaScript - Managing Inventory and Bill Through the Mobile App _(Updated Mar 13, 2026)_
-- **[MG-Product](https://github.com/AdithJanupa/MG-Product)** | JavaScript - Food Shop _(Updated Feb 23, 2026)_
+`Next.js` `TypeScript` `Tailwind CSS` `Framer Motion`
+
+### [SeaForestuna Restaurant Tourism Website](https://github.com/AdithJanupa/Seaforestyuna-Restaurant-Tourism-Website)
+
+A responsive hospitality web app for restaurant menus, bookings, and tourism experiences.
+
+`JavaScript` `HTML` `CSS` `Node.js`
+
+### [SL Farmer Platform](https://slfarmer.com)
+
+A produce website plus admin workspace for product visibility, farm operations, and customer engagement.
+
+`JavaScript` `Tailwind CSS` `Admin Panel` `Farm Management`
+
+### [MG Production Mobile App](https://github.com/AdithJanupa/MG-Production-Mobile-App-)
+
+A mobile-first inventory and billing workflow designed for faster day-to-day business operations.
+
+`Flutter` `Dart` `Firebase` `Mobile App`
+
+### GovInfo Sri Lanka Prototype
+
+A bilingual e-government information portal with chatbot guidance, admin tools, Firebase, and Ollama integration.
+
+`React` `TypeScript` `Firebase` `Ollama`
+
+### Banana Relic Raiders
+
+A puzzle-driven mini-game built with React, TypeScript, Phaser, and a Node.js backend.
+
+`React` `TypeScript` `Phaser` `Node.js`
 
 ## GitHub Stats
 
@@ -93,6 +110,4 @@
 <p align="left">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=AdithJanupa&theme=github-compact&hide_border=true&area=true" alt="GitHub activity graph" />
 </p>
-
-<sub>Last refreshed: Apr 17, 2026, 06:01 UTC via GitHub Actions</sub>
 

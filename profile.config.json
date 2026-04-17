@@ -41,25 +41,66 @@
     {
       "title": "Portfolio Website",
       "url": "https://adithjanupa.netlify.app",
-      "description": "A modern personal portfolio built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Lucide icons."
+      "description": "A modern personal portfolio with clean UI, smooth motion, and a strong focus on presentation.",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ]
+    },
+    {
+      "title": "SeaForestuna Restaurant Tourism Website",
+      "url": "https://github.com/AdithJanupa/Seaforestyuna-Restaurant-Tourism-Website",
+      "description": "A responsive hospitality web app for restaurant menus, bookings, and tourism experiences.",
+      "stack": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Node.js"
+      ]
     },
     {
       "title": "SL Farmer Platform",
       "url": "https://slfarmer.com",
-      "description": "A produce website plus admin workspace for product visibility, farm operations, and customer engagement."
+      "description": "A produce website plus admin workspace for product visibility, farm operations, and customer engagement.",
+      "stack": [
+        "JavaScript",
+        "Tailwind CSS",
+        "Admin Panel",
+        "Farm Management"
+      ]
+    },
+    {
+      "title": "MG Production Mobile App",
+      "url": "https://github.com/AdithJanupa/MG-Production-Mobile-App-",
+      "description": "A mobile-first inventory and billing workflow designed for faster day-to-day business operations.",
+      "stack": [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Mobile App"
+      ]
     },
     {
       "title": "GovInfo Sri Lanka Prototype",
-      "description": "A bilingual e-government information portal with chatbot guidance, admin tools, Firebase, and Ollama integration."
+      "description": "A bilingual e-government information portal with chatbot guidance, admin tools, Firebase, and Ollama integration.",
+      "stack": [
+        "React",
+        "TypeScript",
+        "Firebase",
+        "Ollama"
+      ]
     },
     {
       "title": "Banana Relic Raiders",
-      "description": "A React, TypeScript, and Phaser mini-game with a Node.js and Express backend plus puzzle-driven gameplay."
+      "description": "A puzzle-driven mini-game built with React, TypeScript, Phaser, and a Node.js backend.",
+      "stack": [
+        "React",
+        "TypeScript",
+        "Phaser",
+        "Node.js"
+      ]
     }
-  ],
-  "recentRepoCount": 4,
-  "excludedRepos": [
-    "AdithJanupa",
-    "Adith-Janupa"
   ]
 }
