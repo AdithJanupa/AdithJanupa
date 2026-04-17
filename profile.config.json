@@ -1,0 +1,65 @@
+{
+  "username": "AdithJanupa",
+  "name": "Adith Geekiyanage",
+  "headline": "UI/UX Developer | Web Developer | Mobile Application Developer",
+  "email": "adithjanupa@gmail.com",
+  "portfolio": "https://adithjanupa.netlify.app",
+  "linkedin": "https://www.linkedin.com/in/adith-janupa-638391374/",
+  "about": [
+    "IT student at SLIIT City Uni reading HND IT, with a foundation from SLIIT Academy - UOB FCIT",
+    "Focused on UI/UX design, web applications, and mobile app development",
+    "I enjoy building management systems, interactive websites, portfolio experiences, and full-stack prototypes",
+    "Currently growing with React, Next.js, TypeScript, Flutter, Firebase, and Node.js",
+    "Open to internships, freelance work, and collaborative projects",
+    "Fun fact: I love turning practical ideas into polished digital experiences"
+  ],
+  "skills": [
+    "html",
+    "css",
+    "js",
+    "ts",
+    "react",
+    "nextjs",
+    "nodejs",
+    "express",
+    "flutter",
+    "dart",
+    "firebase",
+    "tailwind",
+    "mongodb",
+    "mysql",
+    "figma",
+    "git",
+    "github",
+    "vscode",
+    "java",
+    "cpp",
+    "cs",
+    "php"
+  ],
+  "manualProjects": [
+    {
+      "title": "Portfolio Website",
+      "url": "https://adithjanupa.netlify.app",
+      "description": "A modern personal portfolio built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Lucide icons."
+    },
+    {
+      "title": "SL Farmer Platform",
+      "url": "https://slfarmer.com",
+      "description": "A produce website plus admin workspace for product visibility, farm operations, and customer engagement."
+    },
+    {
+      "title": "GovInfo Sri Lanka Prototype",
+      "description": "A bilingual e-government information portal with chatbot guidance, admin tools, Firebase, and Ollama integration."
+    },
+    {
+      "title": "Banana Relic Raiders",
+      "description": "A React, TypeScript, and Phaser mini-game with a Node.js and Express backend plus puzzle-driven gameplay."
+    }
+  ],
+  "recentRepoCount": 4,
+  "excludedRepos": [
+    "AdithJanupa",
+    "Adith-Janupa"
+  ]
+}
