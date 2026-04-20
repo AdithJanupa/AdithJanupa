@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/github/followers/AdithJanupa?label=Followers&style=for-the-badge&color=181717" alt="GitHub followers" />
   </a>
   <a href="https://github.com/AdithJanupa?tab=repositories">
-    <img src="https://img.shields.io/badge/Public%20Repos-5-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Public repositories" />
+    <img src="https://img.shields.io/badge/Public%20Repos-6-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Public repositories" />
   </a>
   <a href="https://adithjanupa.netlify.app">
     <img src="https://img.shields.io/badge/Portfolio-Live%20Site-0f172a?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio website" />
